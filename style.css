@@ -1,34 +1,28 @@
+.socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .btn {
-  display: inline-block;
-  margin: 8px 10px 0 0;
-  padding: 10px 18px;
-  border-radius: 9999px;
-  font-weight: bold;
-  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
   text-decoration: none;
-  color: white;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
 }
 
 .btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 20px white;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Các màu riêng */
-.discord {
-  background: linear-gradient(45deg, #7289da, #99aab5);
-}
-
-.facebook {
-  background: linear-gradient(45deg, #1877f2, #3b5998);
-}
-
-.messenger {
-  background: linear-gradient(45deg, #00b2ff, #006aff);
-}
-
-.github {
-  background: linear-gradient(45deg, #333333, #6e5494);
+.btn svg {
+  vertical-align: middle;
 }
