@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profile Cá Nhân</title>
+  <title>Profile Cá Nhân - Chill</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,24 +14,33 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+      background: linear-gradient(135deg, #fdfcfb, #e2d1c3, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
       color: #1f2937;
       padding: 40px;
     }
 
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     .profile-card {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
       overflow: hidden;
-      padding: 30px;
+      padding: 35px;
       animation: fadeIn 1.2s ease;
+      backdrop-filter: blur(5px);
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(20px);}
+      from {opacity: 0; transform: translateY(30px);}
       to {opacity: 1; transform: translateY(0);}
     }
 
@@ -42,21 +51,22 @@
     }
 
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #3b82f6;
+      border: 4px solid #f59e0b;
+      box-shadow: 0 0 10px #fbbf24;
     }
 
     .profile-info h1 {
-      font-size: 2rem;
-      color: #111827;
+      font-size: 2.4rem;
+      color: #1e3a8a;
     }
 
     .profile-info p {
-      font-size: 1rem;
-      color: #6b7280;
+      font-size: 1.1rem;
+      color: #4b5563;
     }
 
     .section {
@@ -64,28 +74,31 @@
     }
 
     .section h2 {
-      font-size: 1.4rem;
-      color: #1f2937;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #3b82f6;
-      display: inline-block;
-      padding-bottom: 5px;
-    }
-
-    .skills, .projects, .contact {
-      padding-left: 15px;
+      font-size: 1.5rem;
+      color: #111827;
+      margin-bottom: 12px;
+      border-left: 5px solid #ec4899;
+      padding-left: 10px;
     }
 
     .skills li {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
+      list-style: none;
+      background: #fce7f3;
+      display: inline-block;
+      padding: 5px 12px;
+      margin-right: 8px;
+      border-radius: 9999px;
+      font-size: 0.95rem;
+      color: #9d174d;
     }
 
     .projects .project {
-      background: #f9fafb;
-      padding: 10px 15px;
+      background: #dbeafe;
+      padding: 12px 16px;
       border-left: 5px solid #3b82f6;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      margin-bottom: 12px;
     }
 
     .contact a {
@@ -93,16 +106,32 @@
       margin-right: 15px;
       color: #2563eb;
       text-decoration: none;
+      transition: all 0.3s;
     }
 
     .contact a:hover {
+      color: #1e40af;
       text-decoration: underline;
+    }
+
+    .music-player {
+      margin-top: 40px;
+      text-align: center;
+    }
+
+    .music-player iframe {
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
     }
 
     @media (max-width: 600px) {
       .profile-header {
         flex-direction: column;
         text-align: center;
+      }
+
+      .skills li {
+        margin-bottom: 10px;
       }
     }
   </style>
@@ -111,49 +140,59 @@
 
   <div class="profile-card">
     <div class="profile-header">
-      <img src="https://i.pravatar.cc/300" alt="Avatar" class="avatar">
+      <img src="https://i.pravatar.cc/300?img=5" alt="Avatar" class="avatar">
       <div class="profile-info">
         <h1>Nguyễn Văn A</h1>
-        <p>Fullstack Developer | Yêu thích sáng tạo và công nghệ</p>
+        <p>Lập trình viên đa năng | Yêu nghệ thuật & công nghệ</p>
       </div>
     </div>
 
     <div class="section">
-      <h2>Giới thiệu</h2>
-      <p>Tôi là một lập trình viên đam mê công nghệ, thích xây dựng những sản phẩm đẹp và tối ưu. Có kinh nghiệm trong frontend, backend và thiết kế UI hiện đại.</p>
+      <h2>🌟 Giới thiệu</h2>
+      <p>Tôi là một developer đam mê xây dựng những sản phẩm có trải nghiệm người dùng mượt mà, đẹp mắt và sáng tạo.</p>
     </div>
 
     <div class="section">
-      <h2>Kỹ năng</h2>
+      <h2>🛠 Kỹ năng</h2>
       <ul class="skills">
-        <li>✅ HTML, CSS, JavaScript</li>
-        <li>✅ React, Vue</li>
-        <li>✅ Node.js, Express</li>
-        <li>✅ MongoDB, MySQL</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+        <li>Figma</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>Dự án</h2>
+      <h2>🚀 Dự án</h2>
       <div class="projects">
         <div class="project">
-          <strong>Portfolio Cá Nhân</strong><br>
-          Website giới thiệu bản thân với hiệu ứng mượt mà và responsive.
+          <strong>Website Portfolio</strong><br>
+          Thiết kế tối giản, hiện đại, tối ưu responsive cho mobile & desktop.
         </div>
         <div class="project">
-          <strong>Ứng dụng Quản lý Công việc</strong><br>
-          Web app giúp theo dõi công việc hằng ngày, tích hợp thông báo và báo cáo.
+          <strong>App Ghi chú cá nhân</strong><br>
+          Sử dụng LocalStorage và React Hooks để lưu trữ & đồng bộ.
         </div>
       </div>
     </div>
 
     <div class="section">
-      <h2>Liên hệ</h2>
+      <h2>📬 Liên hệ</h2>
       <div class="contact">
-        <a href="mailto:email@example.com">📧 Email</a>
-        <a href="https://github.com/">🐙 GitHub</a>
-        <a href="https://linkedin.com/">💼 LinkedIn</a>
+        <a href="mailto:you@example.com">📧 Email</a>
+        <a href="https://github.com/">🐱 GitHub</a>
+        <a href="https://linkedin.com/">🔗 LinkedIn</a>
       </div>
+    </div>
+
+    <div class="music-player">
+      <h2>🎧 Nhạc chill cho bạn</h2>
+      <iframe width="100%" height="166" scrolling="no" frameborder="no"
+        allow="autoplay"
+        src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&mute=1">
+      </iframe>
     </div>
   </div>
 
